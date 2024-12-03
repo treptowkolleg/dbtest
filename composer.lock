@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/treptowkolleg/env.git",
-                "reference": "eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa"
+                "reference": "2def88f086f08075f5ae4fe68d3ceeb0bcbe9f98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/treptowkolleg/env/zipball/eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa",
-                "reference": "eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa",
+                "url": "https://api.github.com/repos/treptowkolleg/env/zipball/2def88f086f08075f5ae4fe68d3ceeb0bcbe9f98",
+                "reference": "2def88f086f08075f5ae4fe68d3ceeb0bcbe9f98",
                 "shasum": ""
             },
             "require": {
@@ -28,7 +28,7 @@
             "type": "package",
             "autoload": {
                 "psr-4": {
-                    "TreptowKolleg\\": "src/"
+                    "TreptowKolleg\\Environment\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -46,7 +46,7 @@
                 "issues": "https://github.com/treptowkolleg/env/issues",
                 "source": "https://github.com/treptowkolleg/env/tree/master"
             },
-            "time": "2024-12-01T22:06:55+00:00"
+            "time": "2024-12-03T12:24:57+00:00"
         },
         {
             "name": "treptowkolleg/orm",
@@ -54,24 +54,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/treptowkolleg/orm.git",
-                "reference": "4db4648d148e59ede047e363c7ca4e3d9bd79668"
+                "reference": "0495768dadaba14d4534452d1d40325003994c2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/4db4648d148e59ede047e363c7ca4e3d9bd79668",
-                "reference": "4db4648d148e59ede047e363c7ca4e3d9bd79668",
+                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/0495768dadaba14d4534452d1d40325003994c2c",
+                "reference": "0495768dadaba14d4534452d1d40325003994c2c",
                 "shasum": ""
             },
             "require": {
                 "ext-pdo": "*",
                 "php": ">=8.1",
-                "treptowkolleg/env": "@stable"
+                "treptowkolleg/env": "dev-master"
             },
             "default-branch": true,
             "type": "package",
             "autoload": {
                 "psr-4": {
-                    "TreptowKolleg\\": "src/"
+                    "TreptowKolleg\\ORM\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -89,7 +89,7 @@
                 "issues": "https://github.com/treptowkolleg/orm/issues",
                 "source": "https://github.com/treptowkolleg/orm/tree/master"
             },
-            "time": "2024-12-03T09:25:47+00:00"
+            "time": "2024-12-03T12:40:54+00:00"
         }
     ],
     "packages-dev": [],
