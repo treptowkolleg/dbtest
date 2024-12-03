@@ -33,9 +33,6 @@ $repository = new Repository(Teacher::class);
 $teacher = $repository->findOneBy(['firstname' => 'Klaus']);
 echo $teacher ?: "Kein Datensatz gefunden";
 
-
-
-
 // benutzerdefiniertes Teacher-Repository
 $teacherRepository = new TeacherRepository();
 $teacher2 = $teacherRepository->findOneLike(['firstname' => 'en', 'lastname' => 'agn']);
