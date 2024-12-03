@@ -3,8 +3,7 @@
 
 use App\Entity\Teacher;
 use App\Repository\TeacherRepository;
-use TreptowKolleg\Environment\DatabaseContainer;
-use TreptowKolleg\Environment\Environment;
+use TreptowKolleg\ORM\Model\Database;
 use TreptowKolleg\ORM\Model\Repository;
 
 require 'vendor/autoload.php';
@@ -13,10 +12,7 @@ require 'vendor/autoload.php';
 # Ohne Mapping #
 ################
 
-$env = new Environment();
-$env->addContainer(new DatabaseContainer());
-$db = $env->getDatabaseObject();
-
+$db = (new Database())->getConnection();
 $statement = $db->prepare("SELECT id, firstname, lastname FROM teacher WHERE firstname = :firstname");
 $statement->bindValue(':firstname', 'Klaus');
 $statement->execute();
