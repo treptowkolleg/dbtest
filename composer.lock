@@ -1,0 +1,109 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6326c17f4d1f093e19f8c4222c0b75a1",
+    "packages": [
+        {
+            "name": "treptowkolleg/env",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/treptowkolleg/env.git",
+                "reference": "eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/treptowkolleg/env/zipball/eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa",
+                "reference": "eb1cbf3e3924f2f0c8edc52e959024af8a26d5aa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=8.1"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "TreptowKolleg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "AG Informatik",
+                    "email": "123292918+treptowkolleg@users.noreply.github.com"
+                }
+            ],
+            "description": "file system package",
+            "support": {
+                "issues": "https://github.com/treptowkolleg/env/issues",
+                "source": "https://github.com/treptowkolleg/env/tree/master"
+            },
+            "time": "2024-12-01T22:06:55+00:00"
+        },
+        {
+            "name": "treptowkolleg/orm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/treptowkolleg/orm.git",
+                "reference": "4db4648d148e59ede047e363c7ca4e3d9bd79668"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/4db4648d148e59ede047e363c7ca4e3d9bd79668",
+                "reference": "4db4648d148e59ede047e363c7ca4e3d9bd79668",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=8.1",
+                "treptowkolleg/env": "@stable"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "TreptowKolleg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "authors": [
+                {
+                    "name": "AG Informatik",
+                    "email": "123292918+treptowkolleg@users.noreply.github.com"
+                }
+            ],
+            "description": "object relational manager",
+            "support": {
+                "issues": "https://github.com/treptowkolleg/orm/issues",
+                "source": "https://github.com/treptowkolleg/orm/tree/master"
+            },
+            "time": "2024-12-03T09:25:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "treptowkolleg/orm": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.1",
+        "ext-pdo": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
