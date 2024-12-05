@@ -22,7 +22,7 @@ class EmployeeList
     private string $startDate;
 
     #[ORM\Column(type: ORM\Types::Date, nullable: true)]
-    private ?string $endDate;
+    private ?string $endDate = null;
 
     public function __construct()
     {

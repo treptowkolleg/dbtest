@@ -37,8 +37,8 @@ class Car {
     private int $carId;
     #[ORM\Column]
     private string $vendorName;
-    #[ORM\Column]
-    private string $modelName;
+    #[ORM\Column(nullable: true)]
+    private ?string $modelName;
     #[ORM\Column]
     private string $color;
     public function getCarId(): int
@@ -108,7 +108,7 @@ try {
     $entityManager->persist($car3);
     $entityManager->flush();
     echo "Änderungen wurden gespeichert!\n\n";
-} catch (Error $e) {
+} catch (PDOException|Error $e) {
     echo $e->getMessage()."\n";
     $entityManager->rollback();
     echo "Änderungen wurden rückgängig gemacht!\n\n";
