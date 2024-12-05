@@ -13,7 +13,7 @@ class EmployeeList
     #[ORM\Column(type: ORM\Types::Integer)]
     private int $id;
 
-    #[ORM\Column(type: ORM\Types::ManyToOne)]
+    #[ORM\Column(type: ORM\Types::Integer)]
     #[ORM\ManyToOne(Teacher::class, "id")]
     private int $teacher;
     private Teacher $teacherObject;
