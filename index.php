@@ -77,6 +77,8 @@ class Car {
  * Nutze hierfür den eigens entwickelten EntityManager!
  */
 
+const DEBUG = true;
+
 // MUSTERLÖSUNG
 $entityManager = new EntityManager();
 $entityManager->dropTable(Car::class);
@@ -123,7 +125,7 @@ try {
 // MUSTERLÖSUNG
 $carRepository = new Repository(Car::class);
 $cars = $carRepository->findAll();
-print_r($cars);
+//print_r($cars);
 
 
 /*
