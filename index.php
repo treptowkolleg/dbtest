@@ -53,7 +53,7 @@ class Car {
     {
         $this->vendorName = $vendorName;
     }
-    public function getModelName(): string
+    public function getModelName(): ?string
     {
         return $this->modelName;
     }
