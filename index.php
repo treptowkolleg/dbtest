@@ -100,13 +100,19 @@ $car2->setColor("Submarine");
 
 $car3 = new Car();
 $car3->setVendorName("VW");
-$car3->setModelName("Golf IV");
 $car3->setColor("Weiß");
 
-$entityManager->persist($car1);
-$entityManager->persist($car2);
-$entityManager->persist($car3);
-$entityManager->flush();
+try {
+    $entityManager->persist($car1);
+    $entityManager->persist($car2);
+    $entityManager->persist($car3);
+    $entityManager->flush();
+    echo "Änderungen wurden gespeichert!\n\n";
+} catch (Error $e) {
+    echo $e->getMessage()."\n";
+    $entityManager->rollback();
+    echo "Änderungen wurden rückgängig gemacht!\n\n";
+}
 
 
 /*
@@ -124,7 +130,7 @@ print_r($cars);
  */
 
 // MUSTERLÖSUNG
-$myCar = $carRepository->findOneBy(['vendor_name' => 'BMW']);
+$myCar = $carRepository->findOneBy(['vendor_name' => 'VW']);
 
 
 /*
