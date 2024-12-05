@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
 
 
 // Mapping auf Teacher-Klasse
-$repository = new Repository(Teacher::class);
+$repository = Repository::new(Teacher::class);
 
 // Sucht Datensatz in Tabelle 'teacher', wo
 // 'firstname' = 'Klaus' und erzeugt neues Teacher-Objekt:
