@@ -130,7 +130,7 @@ print_r($cars);
  */
 
 // MUSTERLÖSUNG
-$myCar = $carRepository->findOneBy(['vendor_name' => 'VW']);
+$myCar = $carRepository->findOneBy(['vendorName' => 'VW']);
 
 
 /*
