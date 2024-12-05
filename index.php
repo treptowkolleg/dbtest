@@ -79,6 +79,7 @@ class Car {
 
 // MUSTERLÖSUNG
 $entityManager = new EntityManager();
+$entityManager->dropTable(Car::class);
 $entityManager->createTable(Car::class);
 
 
