@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/treptowkolleg/orm.git",
-                "reference": "fd252de2a220a8c393c8a07bd0b88bd256b272ac"
+                "reference": "ddf2b3106e870ded6d8f2c225dc7d9e93a5cc6c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/fd252de2a220a8c393c8a07bd0b88bd256b272ac",
-                "reference": "fd252de2a220a8c393c8a07bd0b88bd256b272ac",
+                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/ddf2b3106e870ded6d8f2c225dc7d9e93a5cc6c3",
+                "reference": "ddf2b3106e870ded6d8f2c225dc7d9e93a5cc6c3",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "issues": "https://github.com/treptowkolleg/orm/issues",
                 "source": "https://github.com/treptowkolleg/orm/tree/master"
             },
-            "time": "2024-12-05T19:47:31+00:00"
+            "time": "2024-12-15T20:41:12+00:00"
         }
     ],
     "packages-dev": [],
@@ -104,6 +104,6 @@
         "php": ">=8.1",
         "ext-pdo": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
