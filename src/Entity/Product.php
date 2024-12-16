@@ -13,11 +13,11 @@ class Product
     #[ORM\Column(type: Types::Integer)]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::String)]
+    #[ORM\Column]
     private string $label;
 
     #[ORM\Column(type: Types::Integer, nullable: true)]
-    #[ORM\ManyToOne(Category::class, "id")]
+    #[ORM\ManyToOne(Category::class)]
     private ?int $categoryId = null;
 
     private ?Category $category = null;
