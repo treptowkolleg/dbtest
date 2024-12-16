@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\CategoryRepository;
 use TreptowKolleg\ORM\ORM;
 use TreptowKolleg\ORM\ORM\Types;
 
@@ -14,6 +15,13 @@ class Category
 
     #[ORM\Column]
     private string $label;
+
+    private CategoryRepository $repository;
+
+    public function __construct()
+    {
+        $this->repository = new CategoryRepository();
+    }
 
     public function __toString(): string
     {
@@ -33,6 +41,14 @@ class Category
     public function setLabel(string $label): void
     {
         $this->label = $label;
+    }
+
+    /**
+     * @return Product[]
+     */
+    public function getProducts(): array
+    {
+        return $this->repository->findProducts($this->getId());
     }
 
 }

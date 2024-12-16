@@ -54,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/treptowkolleg/orm.git",
-                "reference": "1f869e68a3f697093af9e511cec234da4f55617f"
+                "reference": "6ec892271c50caa13116bc3ff9573e12ece2b1df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/1f869e68a3f697093af9e511cec234da4f55617f",
-                "reference": "1f869e68a3f697093af9e511cec234da4f55617f",
+                "url": "https://api.github.com/repos/treptowkolleg/orm/zipball/6ec892271c50caa13116bc3ff9573e12ece2b1df",
+                "reference": "6ec892271c50caa13116bc3ff9573e12ece2b1df",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "issues": "https://github.com/treptowkolleg/orm/issues",
                 "source": "https://github.com/treptowkolleg/orm/tree/master"
             },
-            "time": "2024-12-16T05:58:10+00:00"
+            "time": "2024-12-16T12:58:09+00:00"
         }
     ],
     "packages-dev": [],

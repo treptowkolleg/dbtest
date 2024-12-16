@@ -2,25 +2,17 @@
 
 require 'vendor/autoload.php';
 
-use App\Entity\Product;
-use App\Entity\StoreLocation;
-use TreptowKolleg\ORM\Model\EntityManager;
-use TreptowKolleg\ORM\Model\Repository;
+use App\Repository\CategoryRepository;
 
-$em = new EntityManager();
+$repository = new CategoryRepository();
+$category = $repository->find(6);
 
-$em->createTable(StoreLocation::class);
+if($category){
+    echo "Kategorie $category enthält:\n";
 
-$sl = new StoreLocation();
-$sl->setLabel("Bremen");
-$em->persist($sl);
-$em->flush();
-
-$products = Repository::new(Product::class)->findAll(["label" => "asc"]);
-
-foreach ($products as $product) {
-    /**
-     * @var Product $product
-     */
-   echo "{$product} in {$product->getCategory()}\n";
+    foreach ($category->getProducts() as $product) {
+        echo "- $product\n";
+    }
 }
+
+

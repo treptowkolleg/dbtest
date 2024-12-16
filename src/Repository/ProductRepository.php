@@ -2,18 +2,18 @@
 
 namespace App\Repository;
 
-use App\Entity\Teacher;
+use App\Entity\Product;
 use TreptowKolleg\ORM\Model\Repository;
 
-class TeacherRepository extends Repository
+class ProductRepository extends Repository
 {
 
     public function __construct()
     {
-        parent::__construct(Teacher::class);
+        parent::__construct(Product::class);
     }
 
-    public function findOneLike(array $criteria): ?Teacher
+    public function findOneLike(array $criteria): ?Product
     {
         $qm = $this->queryBuilder()->selectOrm();
         foreach ($criteria as $key => $value) {
