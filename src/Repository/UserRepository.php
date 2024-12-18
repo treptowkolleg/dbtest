@@ -3,8 +3,6 @@
 namespace App\Repository;
 
 use App\Entity\User;
-use DateTime;
-use TreptowKolleg\ORM\Exception\OrderByFormatException;
 use TreptowKolleg\ORM\Exception\TypeNotSupportedException;
 use TreptowKolleg\ORM\Model\Repository;
 
@@ -24,8 +22,9 @@ class UserRepository extends Repository
      *
      * @param string $email
      * @return null|User
+     * @throws TypeNotSupportedException
      */
-    public function findByEmail(string $email): ?User
+    public function findOneByEmail(string $email): ?User
     {
         return $this->findOneBy(['email' => $email]);
     }
@@ -35,32 +34,11 @@ class UserRepository extends Repository
      *
      * @param string $username
      * @return null|User
+     * @throws TypeNotSupportedException
      */
-    public function findByUsername(string $username): ?User
+    public function findOneByUsername(string $username): ?User
     {
         return $this->findOneBy(['username' => $username]);
     }
-
-    /**
-     * Find users who registered within a specific date range.
-     *
-     * @param DateTime $startDate
-     * @param DateTime $endDate
-     * @return User[]
-     * @throws OrderByFormatException
-     * @throws TypeNotSupportedException
-     */
-    public function findByRegistrationDateRange(DateTime $startDate, DateTime $endDate): array
-    {
-        // Format the dates to match the database format (Y-m-d)
-        $startDateFormatted = $startDate->format("Y-m-d");
-        $endDateFormatted = $endDate->format("Y-m-d");
-
-        return $this->findBy([
-            'registration_date' => ['gte' => $startDateFormatted, 'lte' => $endDateFormatted]
-        ]);
-    }
-
-
 
 }
