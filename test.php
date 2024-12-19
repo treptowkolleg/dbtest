@@ -15,8 +15,6 @@ $em->createTableIfNotExists(SaveGame::class);
 
 $userRepository = new UserRepository();
 
-
-
 $categoryRepository = new CategoryRepository();
 
 try {

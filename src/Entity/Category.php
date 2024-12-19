@@ -18,11 +18,16 @@ class Category
     #[DB\Column]
     private string $label;
 
+    /**
+     * @var null|Product[]
+     */
+    private ?array $products = null;
+
     private ProductRepository $repository;
 
-    public function __construct()
+    public function __construct(ProductRepository $repository = new ProductRepository())
     {
-        $this->repository = new ProductRepository();
+        $this->repository = $repository;
     }
 
     public function __toString(): string
@@ -46,16 +51,18 @@ class Category
     }
 
     /**
-     * @return Product[]
+     * @return null|Product[]
      */
-    public function getProducts(): array
+    public function getProducts(): ?array
     {
         try {
-            return $this->repository->findBy(["categoryId" => $this->getId()],['label' => 'ASC']);
+            if($this->products == null) {
+               $this->products = $this->repository->findBy(["categoryId" => $this->getId()],['label' => 'ASC']);
+            }
         } catch (OrderByFormatException|TypeNotSupportedException $e) {
 
         }
-        return [];
+        return $this->products;
     }
 
 }
