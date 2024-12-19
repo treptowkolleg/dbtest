@@ -1,5 +1,6 @@
 <?php
 
+use App\Entity\SaveGame;
 use App\Entity\User;
 use App\Repository\CategoryRepository;
 use App\Repository\UserRepository;
@@ -10,6 +11,7 @@ require 'vendor/autoload.php';
 
 $em = new EntityManager();
 $em->createTableIfNotExists(User::class);
+$em->createTableIfNotExists(SaveGame::class);
 
 $userRepository = new UserRepository();
 $user = $userRepository->findOneByLike(['username' => 'agn']);
