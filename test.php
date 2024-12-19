@@ -14,12 +14,7 @@ $em->createTableIfNotExists(User::class);
 $em->createTableIfNotExists(SaveGame::class);
 
 $userRepository = new UserRepository();
-$user = $userRepository->findOneByLike(['username' => 'agn']);
 
-if($user) {
-    echo $user->getCreated()->format("d.m.Y") . PHP_EOL;
-    print_r($user);
-}
 
 
 $categoryRepository = new CategoryRepository();
